@@ -1,0 +1,39 @@
+/* 
+1. 변수를 쓸 수 있다.
+2. Nested를 사용한다. (Nested : 집합)
+3. Mixin을 쓸 수 있다.
+*/
+
+@import './inc/common';
+
+.wrapper {
+	max-width: $wrapperWidth;
+}
+
+.header-wrapper {
+	background-color: $headerBgColor;
+	color: $headerColor;
+	a {
+		&:link,
+		&:visited,
+		&:active,
+		&:hover {text-decoration: none; color: inherit;}
+	}
+	@include flex(space-between, center);
+	.logo {
+		padding: 1em;
+	}
+	.navi-wrap {
+		@include flex;
+		.navi {
+			a {
+				display: block;
+				padding: 1em;
+			}
+			&:hover {
+				background-color: $lightBgColor;
+				color: $headerBgColor;
+			}
+		}
+	}
+}
