@@ -1,8 +1,8 @@
 new Vue({
 	el: '#app',
 	data: {
-		products: [],
-		searchProducts: [],
+		products: [],	// 원본
+		searchProducts: [],	// 검색결과
 		query: ''
 	},
 	async created() {
@@ -17,6 +17,7 @@ new Vue({
 			document.querySelector('.search-wrap input').focus()
 		},
 		onSearch(e) {
+			console.log(e)
 			this.query = e.target.value
 			this.searchProducts = this.products.filter(v => {
 				return v.title.toLowerCase().includes(this.query.toLowerCase()) || v.description.toLowerCase().includes(this.query.toLowerCase())
