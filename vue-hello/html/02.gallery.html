@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../0.BASE/bootstrap.min.css">
+	<link rel="stylesheet" href="../0.BASE/02_base.css">
+	<link rel="stylesheet" href="../css/02.gallery.css">
+	<title>Vue 갤러리</title>
+</head>
+<body>
+	<div id="app">
+		<div class="wrapper">
+			<div class="show-img">
+				<img v-bind:src="src" v-bind:alt="title">
+				<h2 class="title">{{title}}</h2>
+				<!-- v-bind 는 vue에 src랑 역어줘 -->
+			</div>
+			<ul class="thumb-wrap">
+				<!-- <li class="thumb" v-for="v in imgs" v-bind:key="v.id"> --> 
+				<!-- v-bind 는 생략 가능, :은 냄겨둬야 함 -->
+				<li class="thumb" v-for="v in imgs" :key="v.id">
+					<!-- <img v-bind:src="v.src" v-bind:alt="v.title" v-on:click="showImg"> -->
+					<!-- v-on:click 클릭 이벤트 -->
+					<!-- v-on 은 @로 대체 가능, :도 지움 -->
+					<img :src="v.src" :alt="v.title" @click="showImg">
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script src="../0.BASE/vue.js"></script>
+	<script src="../0.BASE/axios.min.js"></script>
+	<script src="../js/02.gallery.js"></script>
+</body>
+</html>
