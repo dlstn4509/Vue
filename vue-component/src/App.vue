@@ -3,7 +3,7 @@
 		<ImgCp :title="title" :src="src" />
 		<!-- 부모가 자식한테 보낼때는 v-bind로 보낸다 -->
 		<ul class="thumb-wrap">
-			<ThumbCp v-for="v in foods" :key="v.id" :img="v" />
+			<ThumbCp v-for="v in foods" :key="v.id" :img="v" @@onChange="imgChange" />
 		</ul>
 	</div>
 </template>
@@ -12,6 +12,8 @@
 /* 
 1. 부모 컴포넌트가 자식 컴포넌트에게 변수를 전달할 때는 v-bind로 전달
 2. 자식 컴포넌트는 부모로부터 props로 변수를 전달 받음
+3. 자식 컴포넌트가 부모 컴포넌트에게 변수를 전달할 때는 이벤트로 전달 ($emit)
+4. 부모 컴포넌트는 자식으로부터 v-on으로 이벤트를 통한 변수를 받음(v-on 이름은 내가 만들어서 정함, 보통 앞에 @ 붙임)
 */
 
 import axios from 'axios'
@@ -26,6 +28,12 @@ export default {
 			foods: [],
 			title: '',
 			src: '',
+		}
+	},
+	methods: {
+		imgChange(v) {
+			this.src = v.src
+			this.title = v.title
 		}
 	},
 	async created() {
