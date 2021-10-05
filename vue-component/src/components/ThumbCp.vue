@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 	.thumb {
-		margin-right: 1%;
+		margin-right: 0 1%;
 		flex-grow: 1;
 		img {
 			cursor: pointer;

@@ -1,5 +1,8 @@
 <template>
-	<div class="app-wrapper my-5">
+	<div class="app-wrapper">
+		<h1 class="alert alert-secondary logo-wrap">
+			<img src="@/assets/img/logo.png" alt="logo" class="logo"> VUE Gallery
+		</h1>
 		<ImgCp :title="title" :src="src" />
 		<!-- 부모가 자식한테 보낼때는 v-bind로 보낸다 -->
 		<ul class="thumb-wrap">
@@ -47,14 +50,19 @@ export default {
 
 <style lang="scss" scoped>
 	.app-wrapper {
-		max-width: 400px;
+		max-width: $wrapper-width;
 		margin: 2em auto 1em auto;
+		.logo-wrap {
+			font-size: 1.25em;
+			.logo {
+				width: 30px;
+			}
+		}
 		.thumb-wrap {
-			border: 1px solid #4400ff;
-			padding: .5em;
+			border: 1px solid $primary-color;
 			border-radius: .325em;
-			display: flex;
-			width: 101%;
+			padding: .5em;
+			@include flex($jc: space-between)
 		}
 	}
 </style>
