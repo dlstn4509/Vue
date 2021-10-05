@@ -1,28 +1,31 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template> <!-- HTML -->
+	<div class="header-wrapper">
+		<h1 class="logo">Hello {{name}}</h1>
+		<button @click="showAlert">alert 버튼</button>
+	</div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
+<script> // JS 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App', // 관습적으로 쓰는 네임
+	data() { // 전역변수 설정, 함수로 쓰고 리턴해준다
+		return {
+			name: 'dlstn4509'
+		}
+	},
+	methods: {
+		showAlert(e) {
+			alert('Hello' + ' ' + this.name)
+		}
+	}
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss"> // CSS(scss)
+	.header-wrapper {
+		text-align: center;
+		h1.logo {
+			color: red;
+		}
+	}
 </style>
