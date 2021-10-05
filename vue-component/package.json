@@ -7,6 +7,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "axios": "^0.22.0",
+    "bootstrap": "^5.1.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
@@ -20,7 +23,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
-    "> 1%",
+    "> 0.1%",
     "last 2 versions",
     "not dead"
   ]

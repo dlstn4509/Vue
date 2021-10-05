@@ -1,31 +1,26 @@
-<template> <!-- HTML -->
-	<div class="header-wrapper">
-		<h1 class="logo">Hello {{name}}</h1>
-		<button @click="showAlert">alert 버튼</button>
+<template>
+	<div class="app-wrapper my-5">
+		<ImgCp />
 	</div>
 </template>
 
-<script> // JS 
-export default {
-	name: 'App', // 관습적으로 쓰는 네임
-	data() { // 전역변수 설정, 함수로 쓰고 리턴해준다
-		return {
-			name: 'dlstn4509'
-		}
-	},
-	methods: {
-		showAlert(e) {
-			alert('Hello' + ' ' + this.name)
-		}
+<script>
+import axios from 'axios'
+import ImgCp from './components/imgCp.vue'
+
+export default { // 1개만 내보내면 export default / 2개 이상이면 export
+	name: 'App',
+	components: { ImgCp },
+	async created() {
+		const { data } = await axios.get('/json/foods.json')
+		console.log(data)
 	}
 }
 </script>
 
-<style lang="scss"> // CSS(scss)
-	.header-wrapper {
-		text-align: center;
-		h1.logo {
-			color: red;
-		}
+<style lang="scss" scoped>
+	.app-wrapper {
+		max-width: 400px;
+		margin: 2em auto;
 	}
 </style>
