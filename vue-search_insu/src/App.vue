@@ -2,7 +2,12 @@
   <div class="container">
     <TitleCp :title="logoTitle" />
     <SearchCp @@onSearch="onSearch" />
-    <ThumbCp v-for="v in huntfoods" :key="v.id" :food="v" />
+    <div v-if="huntfoods.length === 0">
+      <ThumbCp v-for="v in foods" :key="v.id" :food="v" />
+    </div>
+    <div v-else>
+      <ThumbCp v-for="v in huntfoods" :key="v.id" :food="v" />
+    </div>
   </div>
 </template>
 
