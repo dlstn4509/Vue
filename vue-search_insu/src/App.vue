@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <TitleCp :title="logoTitle" />
-    <SearchCp  />
-    <ThumbCp v-for="v in foods" :key="v.id" :food="v" />
+    <SearchCp @@onSearch="onSearch" />
+    <ThumbCp v-for="v in huntfoods" :key="v.id" :food="v" />
   </div>
 </template>
 
@@ -16,8 +16,10 @@ export default {
   name: 'App',
   data() {
     return {
-      foods: [],
+      foods: [], // 원본
+      huntfoods: [], // 검색결과
       logoTitle: '',
+      huntImg: '',
     };
   },
   components: { TitleCp, SearchCp, ThumbCp },
@@ -25,6 +27,14 @@ export default {
     const { data } = await axios.get('/json/foods.json');
     this.foods = data;
     this.logoTitle = '인수 쇼핑몰';
+  },
+  methods: {
+    onSearch(v) {
+      this.huntImg = v;
+      console.log(this.huntImg);
+      console.log(this.huntfoods);
+      this.huntfoods = this.foods.filter((v2) => v2.title.includes(this.huntImg));
+    },
   },
 };
 </script>

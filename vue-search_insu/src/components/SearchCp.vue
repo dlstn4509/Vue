@@ -1,16 +1,21 @@
 <template>
   <div class="search-wrap">
-    <input type="text" class="form-control form-control-lg" v-model="query" @keyup="onSearch">
+    <input type="text" class="form-control form-control-lg" value="" @keyup="onSearch">
   </div>
 </template>
 
 <script>
 export default {
   name: 'SearchCp',
-  props: [],
+  data() {
+    return {
+      value: '',
+    };
+  },
   methods: {
-    onSearch() {
-      
+    onSearch(e) {
+      this.value = e.target.value;
+      this.$emit('@onSearch', this.value);
     },
   },
 };

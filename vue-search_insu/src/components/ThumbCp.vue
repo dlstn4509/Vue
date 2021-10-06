@@ -14,7 +14,14 @@
 <script>
 export default {
   name: 'ThumbCp',
-  props: ['food'],
+  props: ['food', 'huntImg'],
+  data() {
+    return {
+      searchImg: [],
+    };
+  },
+  created() {
+  },
 };
 </script>
 
