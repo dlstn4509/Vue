@@ -1,7 +1,7 @@
 <template>
   <div class="container my-3">
     <Title :title="mainTitle" />
-    <Search  />
+    <Search @@change="onChangeQuery" />
   </div>
 </template>
 
@@ -15,7 +15,13 @@ export default {
   data() {
     return {
       mainTitle: '다팔아 쇼핑몰 인수',
+      query: '',
     };
+  },
+  methods: {
+    onChangeQuery(v) {
+      this.query = v;
+    },
   },
 };
 </script>

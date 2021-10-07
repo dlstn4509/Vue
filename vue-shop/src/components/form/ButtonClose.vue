@@ -1,6 +1,6 @@
 <template>
   <button>
-    <i class="fa fa-times"></i>
+    <i class="fa fa-times-circle"></i>
   </button>
 </template>
 

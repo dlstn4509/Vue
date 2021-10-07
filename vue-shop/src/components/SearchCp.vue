@@ -1,21 +1,19 @@
 <template>
-  <form class="search-wrapper" @submit.prevent="onSubmit">
+  <div class="search-wrapper" @submit.prevent="onSubmit">
     <input
       @input="changeQuery"
       type="text"
       name="query"
-      class="form-control form-control-lg"
+      class="form-control form-control-lg search-input"
       autofocus>
-    <ButtonClose class="bt-close" />
-  </form>
+    <i @click="onReset" class="bt-close fa fa-times-circle" />
+  </div>
 </template>
 
 <script>
-import ButtonClose from './form/ButtonClose.vue';
-
 export default {
   name: 'Search',
-  components: { ButtonClose },
+  components: { },
   data() {
     return {
       query: '',
@@ -24,11 +22,14 @@ export default {
   methods: {
     changeQuery(e) {
       this.query = e.target.value;
+      this.$emit('@change', this.query);
     },
-    onSubmit(e) {
-      this.query = e.target.query.value;
-      e.target.reset();
-      e.target.query.focus();
+    onReset() { // 검색어 삭제
+      const input = document.querySelector('.search-input');
+      this.query = '';
+      input.value = '';
+      input.focus();
+      this.$emit('@change', this.query);
     },
   },
 };
@@ -39,7 +40,11 @@ export default {
   @include rel;
   .bt-close {
     font-size: 1.25em;
+    cursor: pointer;
     @include layer($t: calc(50% - .5em), $r: .5em);
+  }
+  .search-input {
+    width: 400px;
   }
 }
 </style>
