@@ -2,7 +2,7 @@
   <div class="container my-3">
     <Title :title="mainTitle" />
     <Search @@change="onChangeQuery" />
-    <ListWrap v-for="v in foods" :key="v.id" :food="v" />
+    <ListWrap @@click="onChangeList" :lists="foods" />
   </div>
 </template>
 
@@ -26,6 +26,9 @@ export default {
     onChangeQuery(v) {
       this.query = v;
     },
+    onChangeList(v) {
+      console.log(v);
+    },
   },
   async created() {
     const { data } = await axios.get('/json/foods.json');
@@ -34,6 +37,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '@/assets/scss/_common.scss';
+<style lang="scss">
+  .container {
+    font-size: inherit;
+  }
 </style>

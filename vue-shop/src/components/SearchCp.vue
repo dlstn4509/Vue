@@ -1,5 +1,5 @@
 <template>
-  <div class="search-wrapper" @submit.prevent="onSubmit">
+  <div class="search-wrapper" >
     <input
       @input="changeQuery"
       type="text"
@@ -37,14 +37,12 @@ export default {
 
 <style lang="scss" scoped>
 .search-wrapper {
+  margin-bottom: 1em;
   @include rel;
   .bt-close {
     font-size: 1.25em;
     cursor: pointer;
     @include layer($t: calc(50% - .5em), $r: .5em);
-  }
-  .search-input {
-    width: 400px;
   }
 }
 </style>

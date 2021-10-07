@@ -4,7 +4,7 @@
 	position: relative;
 } 
 
-@mixin rel {
+@mixin abs {
 	position: absolute;
 } 
 
@@ -28,11 +28,11 @@
 	transform: translate(-50%, -50%);
 }
 
-@mixin flex($jc: flex-start, $ai: stretch, $wp: nowrap) {
+@mixin flex($h: flex-start, $v: stretch, $w: nowrap) {
 	display: flex;
-	justify-content: $jc;
-	align-items: $ai;
-	flex-wrap: $wp;
+	justify-content: $h;
+	align-items: $v;
+	flex-wrap: $w;
 }
 
 @mixin flexCol {
