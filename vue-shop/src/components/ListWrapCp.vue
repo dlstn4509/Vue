@@ -1,13 +1,20 @@
 <template>
-  <div></div>
+  <ul>
+    <List />
+    {{food}}
+  </ul>
 </template>
 
 <script>
+import List from './ListCp.vue';
+
 export default {
   name: 'ListWrapCp',
+  components: { List },
+  props: ['food'],
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
