@@ -17,14 +17,6 @@ export default {
   name: 'Header',
   components: {
     Nav
-  },
-  data () {
-    return {
-      items: [
-        { text: 'Daily', href: '/' },
-        { text: '5Days', href: '/5days' }
-      ]
-    }
   }
 }
 </script>
