@@ -9,19 +9,20 @@
 
 <script>
 export default {
-  name: 'TitleCp',
+  name: 'Title',
   props: ['title'],
 };
 </script>
 
 <style lang="scss" scoped>
-  .header-wrapper {
-    padding: $gutter-width;
-    background-color: $secondary-color;
-    color: $primary-color;
-    font-size: 1.5em;
-    .logo {
-      width: 1.5px;
-    }
+.header-wrapper {
+  padding: $gutter-width;
+  background-color: $secondary-color;
+  color: $dark-color;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  .logo {
+    width: 1.5em;
   }
+}
 </style>
