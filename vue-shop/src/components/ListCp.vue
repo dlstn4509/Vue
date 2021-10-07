@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss" scoped>
   .list {
+    cursor: pointer;
     @include rel;
     width: 23%;
     margin-right: 2%;
