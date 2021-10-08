@@ -3,7 +3,7 @@
 
 import apiCoords from '../api/api-coords'
 
-const ACT_COORDS = async ({ commit }, v) => {
+const ACT_COORDS = async ({ commit }) => {
   try {
     const { coords } = await apiCoords()
     commit('MUT_COORDS', { let: coords.latitude, lon: coords.longitude })

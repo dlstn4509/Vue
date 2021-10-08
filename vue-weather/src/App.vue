@@ -12,10 +12,7 @@ import Footer from './components/inc/Footer.vue'
 
 export default {
   name: 'App',
-  components: {
-    Header,
-    Footer
-  }
+  components: { Header, Footer }
 }
 </script>
 
