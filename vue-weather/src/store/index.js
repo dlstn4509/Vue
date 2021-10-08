@@ -4,12 +4,16 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+  state: { // 변수 등록
+
   },
-  mutations: {
+  getters: { // Store에 데이터 요청
+
   },
-  actions: {
+  mutations: { // Reducer : Store 데이터 상태 관리(History)
+
   },
-  modules: {
+  actions: { // Store 데이터 상태 변화
+
   }
 })
