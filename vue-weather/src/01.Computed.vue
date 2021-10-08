@@ -4,13 +4,14 @@
     <button @click="updateCounter">카운트 올리기</button>
     <button @click="getLocation">위치 정보 가져오기</button>
     <h2>{{getLat}} / {{getLon}}</h2>
+    <h2>위도는 {{lat.toFixed(4)}} 입니다. / 경도는 {{lon.toFixed(4)}} 입니다.</h2>
   </div>
 </template>
 
 <script>
 // import { mapGetters } from 'vuex'
 
-import apiCoords from './api/api-coords'
+import { apiCoords } from './api/api-coords'
 
 export default {
   name: 'Getters01',
@@ -22,6 +23,8 @@ export default {
     }
   },
   computed: {
+    // 1. 내가 참조하고 있는 변수값이 바뀌면 내가 바뀐다.
+    // 2. 참조변수(data)를 가공해서 새로운 값을 리턴, 연산 작업
     counter: function () {
       return this.count + ' 입니다'
     },
