@@ -5,13 +5,14 @@ const url = 'https://api.openweathermap.org/data/2.5/weather'
 const params = { units: 'metric', appid }
 // const icons = ['https://openweathermap.org/img/wn/', '@2x.png']
 
-const apiDaily = (options) => {
+const apiDaily = options => {
+  params.lang = options.lang || 'kr'
   if (options.id) {
     params.id = options.id
   } else if (options.lat && options.lon) {
     params.lat = options.lat
     params.lon = options.lon
-  } else { //
+  } else {
     throw new Error('Error')
   }
   return axios.get(url, { params })

@@ -12,10 +12,7 @@ import Logo from './Logo.vue'
 
 export default {
   name: 'Header',
-  components: {
-    Logo,
-    Nav
-  }
+  components: { Logo, Nav }
 }
 </script>
 
