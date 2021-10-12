@@ -1,11 +1,11 @@
 <template>
-  <div :style="style">{{ temp }}</div>
+  <div :style="style">{{ date }}</div>
 </template>
 
 <script>
 export default {
-  name: 'City',
-  props: ['temp', 'styled'],
+  name: 'Date',
+  props: ['date', 'styled'],
   computed: {
     style: function () {
       if (this.styled) {
