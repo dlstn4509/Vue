@@ -1,4 +1,4 @@
-export default { // Store에 데이터 요청 (getters)
+export default {
   GET_COORDS: function (state) {
     return state.coords
   },

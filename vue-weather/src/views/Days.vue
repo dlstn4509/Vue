@@ -1,5 +1,5 @@
 <template>
-  <div class="5Days">
-    <h1>5Days</h1>
+  <div class="5days">
+    <h1>5days</h1>
   </div>
 </template>

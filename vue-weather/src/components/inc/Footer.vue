@@ -1,6 +1,6 @@
 <template>
   <footer>
-    copyright ⓒ dlstn4509. Allright reserved.
+    ⓒ copyright booldook. Allright reserved.
   </footer>
 </template>
 
@@ -11,10 +11,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  footer {
-    background-color: $dark-color;
-    color: $light-color;
-    padding: 1em;
-    text-align: center;
-  }
+footer {
+  background-color: $dark-color;
+  color: $light-color;
+  padding: 1em;
+  text-align: center;
+}
 </style>

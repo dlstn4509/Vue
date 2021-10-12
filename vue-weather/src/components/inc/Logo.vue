@@ -1,8 +1,10 @@
 <template>
   <h1 class="logo">
-    <i class="fa fa-sun" />
-    날씨앱
-    <small>v 0.1</small>
+    <router-link to="/">
+      <i class="fa fa-sun" />
+      날씨앱
+      <small>v 0.1</small>
+    </router-link>
   </h1>
 </template>
 
@@ -13,7 +15,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .logo {
+h1.logo {
+  a {
+    display: block;
     padding: .5em;
   }
+}
 </style>

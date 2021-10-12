@@ -16,23 +16,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  ul.navi-wrap {
-    @include flex($h: space-between);
-    li {
-      font-size: .75em;
-      cursor: pointer;
-      a {
-        display: block;
-        padding: .875em 1.5em;
-        &:hover {
-          color: inherit;
-          text-decoration: none;
-        }
-      }
-      &:hover {
-        background-color: $secondary-color;
-        color: $dark-color;
-      }
+ul.navi-wrap {
+  @include flex;
+  li {
+    font-size: .75em;
+    cursor: pointer;
+    a {
+      display: block;
+      padding: .875em 1.25em;
+    }
+    &:hover {
+      background-color: $secondary-color;
+      color: $dark-color;
     }
   }
+}
 </style>

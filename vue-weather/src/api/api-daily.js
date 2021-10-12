@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const appid = '3c04f92240b9cdfbc2e0280668623b5d'
+const appid = '02efdd64bdc14b279bc91d9247db4722'
 const url = 'https://api.openweathermap.org/data/2.5/weather'
-const params = { units: 'metric', appid }
-// const icons = ['https://openweathermap.org/img/wn/', '@2x.png']
+// const icons = ['http://openweathermap.org/img/wn/', '@2x.png']
+const params = { units: 'metric', lang: 'kr', appid }
 
 const apiDaily = options => {
   params.lang = options.lang || 'kr'

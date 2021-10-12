@@ -1,6 +1,3 @@
-// Store 데이터 상태 변화, 할 거 많음
-// 내가 하는거 (깃 푸쉬)
-
 import { apiCoords } from '../api/api-coords'
 import apiDaily from '../api/api-daily'
 
@@ -21,4 +18,5 @@ const ACT_DAILY = async ({ commit }, v) => {
 const ACT_DAYS = () => {
 
 }
+
 export default { ACT_COORDS, ACT_DAILY, ACT_DAYS }
