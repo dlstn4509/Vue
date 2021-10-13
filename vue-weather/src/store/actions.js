@@ -1,3 +1,4 @@
+// Store 데이터 상태 변화
 import { apiCoords } from '../api/api-coords'
 import apiWeather from '../api/api-weather'
 import apiCity from '../api/api-city'

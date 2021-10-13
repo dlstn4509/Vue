@@ -11,12 +11,7 @@ import Nav from './Nav.vue'
 
 export default {
   name: 'Header',
-  components: { Nav, Logo },
-  data () {
-    return {
-
-    }
-  }
+  components: { Nav, Logo }
 }
 </script>
 
