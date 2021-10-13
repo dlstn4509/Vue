@@ -8,6 +8,8 @@ import Daily from '../views/Daily.vue' // 메인페이지는 지연로딩 안해
 // 지연 로딩, 볼때마다 로딩
 // const Daily = () => import('../views/Daily.vue')
 const Days = () => import('../views/Days.vue')
+const Posts = () => import('../views/PostsCp.vue')
+const Users = () => import('../views/UsersCp.vue')
 
 Vue.use(VueRouter)
 
@@ -21,6 +23,16 @@ const routes = [
     path: '/5days',
     name: 'Days',
     component: Days
+  },
+  {
+    path: '/users',
+    name: 'Users',
+    component: Users
+  },
+  {
+    path: '/posts',
+    name: 'Posts',
+    component: Posts
   }
 ]
 
