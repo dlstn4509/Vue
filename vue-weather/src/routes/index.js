@@ -1,7 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Daily from '../views/Daily.vue'
-import Days from '../views/Days.vue'
+
+// 일괄 로딩, 일단 전부 다 로딩
+import Daily from '../views/Daily.vue' // 메인페이지는 지연로딩 안해도 됨
+// import Days from '../views/Days.vue'
+
+// 지연 로딩, 볼때마다 로딩
+// const Daily = () => import('../views/Daily.vue')
+const Days = () => import('../views/Days.vue')
 
 Vue.use(VueRouter)
 
