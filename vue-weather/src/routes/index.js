@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-// 일괄 로딩, 일단 전부 다 로딩
+// 일괄 로딩, 일단 전부 다 로딩~
 import Daily from '../views/Daily.vue' // 메인페이지는 지연로딩 안해도 됨
 // import Days from '../views/Days.vue'
 
