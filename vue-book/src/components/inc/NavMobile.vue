@@ -4,13 +4,13 @@
     <transition name="fade" mode="out-in">
       <ul class="navi-wrap" v-show="isVisible">
         <li>
-          <router-link to="/book">
+          <router-link to="/">
             도서리스트
             <small>(Pagination)</small>
           </router-link>
         </li>
         <li>
-          <router-link to="/book2">
+          <router-link to="/infinite">
             도서리스트
             <small>(Infinite Scroll)</small>
           </router-link>
