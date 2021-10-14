@@ -3,8 +3,21 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   name: "ListCp",
+  computed: {
+    ...mapGetters(["GET_BOOKS"]),
+  },
+  watch: {
+    GET_BOOKS: function (v) {
+      console.log(v);
+    },
+  },
+  created() {
+    this.$store.dispatch("ACT_BOOKS");
+  },
 };
 </script>
 

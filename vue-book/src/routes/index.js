@@ -21,7 +21,7 @@ const routes = [
     path: "/View",
     name: "View",
     component: View,
-  }
+  },
 ];
 
 const router = new VueRouter({

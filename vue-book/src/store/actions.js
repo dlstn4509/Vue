@@ -1,6 +1,15 @@
-// Store 데이터 상태 변화
-const ACT_COORDS = async ({ commit }) => {
-  console.log(commit);
+import apiBooks from "../api/api-books"
+
+const ACT_BOOKS = async ({ commit }, page = 1) => {
+  try {
+    const { data } = await apiBooks(page);
+    commit("MUT_BOOKS", data);
+  } catch (err) {
+    commit("MUT_BOOKS", null);
+  }
+};
+const ACT_BOOK = async ({ commit }, idx) => {
+  console.log(commit, idx);
 };
 
-export default { ACT_COORDS };
+export default { ACT_BOOKS, ACT_BOOK };
