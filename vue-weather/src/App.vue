@@ -27,4 +27,5 @@ export default {
       flex-grow: 1;
     }
   }
+  /* dabanbus-vue--weather.firebaseapp.com */
 </style>
