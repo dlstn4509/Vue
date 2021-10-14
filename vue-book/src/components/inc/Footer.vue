@@ -1,5 +1,5 @@
 <template>
-  <footer>ⓒ copyright booldook. Allright reserved.</footer>
+  <footer>ⓒ copyright dlstn4509. Allright reserved.</footer>
 </template>
 
 <script>

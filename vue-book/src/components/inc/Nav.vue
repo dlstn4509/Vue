@@ -1,16 +1,22 @@
 <template>
   <ul class="navi-wrap">
     <li>
-      <router-link to="/">Daily</router-link>
+      <router-link to="/book">
+        도서리스트
+        <small>(Pagination)</small>
+      </router-link>
     </li>
     <li>
-      <router-link to="/5days">5Days</router-link>
+      <router-link to="/book2">
+        도서리스트
+        <small>(Infinite Scroll)</small>
+      </router-link>
     </li>
     <li>
-      <router-link to="/users">Users</router-link>
-    </li>
-    <li>
-      <router-link to="/posts">Posts</router-link>
+      <router-link to="//127.0.0.1:3000">
+        도서리스트
+        <small>(Express)</small>
+      </router-link>
     </li>
   </ul>
 </template>

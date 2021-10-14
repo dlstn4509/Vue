@@ -1,8 +1,8 @@
 <template>
   <h1 class="logo">
     <router-link to="/">
-      <i class="fa fa-sun" />
-      날씨앱
+      <i class="fa fa-book" />
+      Vue 도서관리시스템 인수
       <small>v 0.1</small>
     </router-link>
   </h1>

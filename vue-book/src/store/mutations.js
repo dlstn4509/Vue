@@ -2,5 +2,5 @@
 export default {
   MUT_COORDS(state, v) {
     state.coords = v;
-  }
+  },
 };

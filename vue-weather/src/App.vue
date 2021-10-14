@@ -1,9 +1,11 @@
 <template>
-<div class="app-wrapper">
-  <Header />
-  <router-view class="router-view "/>
-  <Footer />
-</div>
+  <div class="app-wrapper">
+    <Header />
+    <transition name="slide-scale" mode="out-in">
+      <router-view class="router-view" />
+    </transition>
+    <Footer />
+  </div>
 </template>
 
 <script>
