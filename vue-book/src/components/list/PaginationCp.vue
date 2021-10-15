@@ -6,7 +6,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import TableCp from "../TableCp.vue";
+import TableCp from "../common/TableCp.vue";
 
 export default {
   name: "PagerCp",
