@@ -24,8 +24,8 @@ export default {
   data() {
     return {
       expressLink: VUE_APP_EXPRESS,
-    }
-  }
+    };
+  },
 };
 </script>
 

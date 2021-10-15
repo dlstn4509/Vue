@@ -28,7 +28,7 @@ export default {
     },
     date() {
       return moment(this.book.createdAt).format("YYYY년 MM월 DD일");
-    }
+    },
   },
 };
 </script>
