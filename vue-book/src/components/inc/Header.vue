@@ -32,7 +32,7 @@ export default {
   .navi-mo {
     display: none;
     @include MD {
-      display: block;
+      display: flex;
     }
   }
 }

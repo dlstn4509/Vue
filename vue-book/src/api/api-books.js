@@ -1,11 +1,13 @@
 import axios from "axios";
-import { API_KEY, URL_BOOKS } from "../modules/common";
+const { VUE_APP_API_KEY, VUE_APP_URL_BOOKS } = process.env;
 
 const apiBooks = (page) => {
-  return axios.get(URL_BOOKS, {
-    params: { page, API_KEY },
+  return axios.get(VUE_APP_URL_BOOKS, {
+    params: { page, apikey: VUE_APP_API_KEY },
     withCredentials: true,
   });
+  
+  // return axios.get("http://127.0.0.1:3100/book?page=1&apikey=62f45e12-ffcb-4af7-8705-af5c71db9193");
 };
 
 export default apiBooks;

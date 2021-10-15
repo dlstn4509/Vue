@@ -33,9 +33,10 @@ ul.navi-wrap {
   li {
     font-size: 0.75em;
     cursor: pointer;
+    @include flex;
     a {
-      display: block;
-      padding: 0.875em 1.25em;
+      @include flex($v: center);
+      padding: 0 1.25em;
     }
     &:hover {
       background-color: $secondary-color;

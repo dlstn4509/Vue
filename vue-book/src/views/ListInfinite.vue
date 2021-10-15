@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import InfiniteCp from "../components/InfiniteCp.vue";
+import InfiniteCp from "../components/Infinite/InfiniteCp.vue";
 
 export default {
   name: "Infinite",

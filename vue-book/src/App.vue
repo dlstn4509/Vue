@@ -1,6 +1,7 @@
 <template>
   <div class="app-wrapper">
     <Header />
+    <TitleBar />
     <transition name="slide" mode="out-in">
       <router-view class="router-view" />
     </transition>
@@ -11,10 +12,11 @@
 <script>
 import Header from "./components/inc/Header.vue";
 import Footer from "./components/inc/Footer.vue";
+import TitleBar from "./components/inc/TitleBar.vue";
 
 export default {
   name: "App",
-  components: { Header, Footer },
+  components: { Header, Footer, TitleBar },
 };
 </script>
 

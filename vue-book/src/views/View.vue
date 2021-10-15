@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import ViewCp from "../components/ViewCp.vue";
+import ViewCp from "../components/view/ViewCp.vue";
 
 export default {
   name: "View",

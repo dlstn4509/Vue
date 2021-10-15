@@ -8,6 +8,7 @@ const ACT_BOOKS = async ({ commit }, page = 1) => {
     commit("MUT_BOOKS", null);
   }
 };
+
 const ACT_BOOK = async ({ commit }, idx) => {
   console.log(commit, idx);
 };

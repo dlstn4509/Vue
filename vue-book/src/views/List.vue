@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import ListCp from "../components/ListCp.vue";
+import ListCp from "../components/list/PaginationCp.vue";
 
 export default {
   name: "List",
