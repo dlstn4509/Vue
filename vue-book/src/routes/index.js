@@ -9,10 +9,6 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    redirect: "/list/1",
-  },
-  {
-    path: "/list/:page",
     name: "List",
     component: List,
   },

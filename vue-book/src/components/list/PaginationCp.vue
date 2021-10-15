@@ -10,9 +10,13 @@ import TableCp from "../common/TableCp.vue";
 export default {
   name: "PagerCp",
   components: { TableCp },
+  props: ["page"],
   created() {
-    console.log(this.$route.params.page);
-    this.$store.dispatch("ACT_BOOKS", this.$route.params.page || 1);
+    this.$store.dispatch("ACT_BOOKS", 1);
+    this.$store.dispatch("ACT_LOADING", true);
+  },
+  mounted() {
+    console.log(this.page);
   },
 };
 </script>

@@ -6,4 +6,7 @@ export default {
   MUT_BOOK(state, v) {
     state.book = v;
   },
+  MUT_LOADING(state, v) {
+    state.isLoading = v;
+  },
 };

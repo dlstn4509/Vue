@@ -32,6 +32,12 @@ export default {
   computed: {
     ...mapGetters(["GET_BOOKS"]),
   },
+  beforeUpdate() {
+    this.$store.dispatch("ACT_LOADING", true);
+  },
+  updated() {
+    this.$store.dispatch("ACT_LOADING", false);
+  },
 };
 </script>
 
