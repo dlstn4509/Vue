@@ -26,6 +26,7 @@ export default {
         ? process.env.VUE_APP_EXPRESS + this.book.cover
         : false;
     },
+    // /uploads/211015/211015_b672e361-3d8b-4849-9657-f4db60779ed6.jpg",
     date() {
       return moment(this.book.createdAt).format("YYYY년 MM월 DD일");
     },

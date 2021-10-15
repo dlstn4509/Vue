@@ -1,31 +1,30 @@
 <template>
   <ul class="pager-wrap">
-    <li @click="changePage" :title="firstPage" class="pager">
+    <li @click="changePage" :data-page="firstPage" class="pager">
       <i class="fa fa-step-backward"></i>
     </li>
-    <li @click="changePage" :title="prevPager" class="pager">
+    <li @click="changePage" :data-page="prevPager" class="pager">
       <i class="fa fa-backward"></i>
     </li>
-    <li @click="changePage" :title="prevPage" class="pager">
+    <li @click="changePage" :data-page="prevPage" class="pager">
       <i class="fa fa-caret-left"></i>
     </li>
     <li
-      class="pager"
       v-for="v in pageArr"
+      :data-page="v"
       :key="v"
       :class="`pager ${page === v ? 'active' : ''}`"
-      :title="v"
       @click="changePage"
     >
       {{ v }}
     </li>
-    <li @click="changePage" :title="nextPage" class="pager">
+    <li @click="changePage" :data-page="nextPage" class="pager">
       <i class="fa fa-caret-right"></i>
     </li>
-    <li @click="changePage" :title="nextPager" class="pager">
+    <li @click="changePage" :data-page="nextPager" class="pager">
       <i class="fa fa-forward"></i>
     </li>
-    <li @click="changePage" :title="lastPage" class="pager">
+    <li @click="changePage" :data-page="lastPage" class="pager">
       <i class="fa fa-step-forward"></i>
     </li>
   </ul>
@@ -34,7 +33,7 @@
 <script>
 export default {
   name: "PagerCp",
-  props: ["pager"],
+  props: ["pager"], // TableCp
   data() {
     return {
       prevPager: 1,
@@ -66,7 +65,7 @@ export default {
   },
   methods: {
     changePage(e) {
-      const _page = e.currentTarget.title;
+      const _page = e.currentTarget.dataset["page"];
       if (this.page != _page) {
         this.$store.dispatch("ACT_BOOKS", _page);
       }

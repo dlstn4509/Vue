@@ -1,6 +1,6 @@
 import apiBooks from "../api/api-books";
 
-const ACT_BOOKS = async ({ commit }, page = 1) => {
+const ACT_BOOKS = async ({ commit }, page) => {
   try {
     const { data } = await apiBooks(page);
     commit("MUT_BOOKS", data);
@@ -13,8 +13,8 @@ const ACT_BOOK = async ({ commit }, idx) => {
   console.log(commit, idx);
 };
 
-const ACT_LOADING = async({ commit }, toggle) => {
+const ACT_LOADING = async ({ commit }, toggle) => {
   commit("MUT_LOADING", toggle);
-}
+};
 
 export default { ACT_BOOKS, ACT_BOOK, ACT_LOADING };
