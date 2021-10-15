@@ -1,4 +1,4 @@
-import apiBooks from "../api/api-books"
+import apiBooks from "../api/api-books";
 
 const ACT_BOOKS = async ({ commit }, page = 1) => {
   try {
