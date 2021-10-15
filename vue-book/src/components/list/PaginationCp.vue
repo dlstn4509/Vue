@@ -13,7 +13,6 @@ export default {
   props: ["page"],
   created() {
     this.$store.dispatch("ACT_BOOKS", 1);
-    this.$store.dispatch("ACT_LOADING", true);
   },
   mounted() {
     console.log(this.page);
