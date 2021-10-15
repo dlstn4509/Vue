@@ -1,12 +1,13 @@
 <template>
-  <ListCp />
+  <PaginationCp :page="page || 1" />
 </template>
 
 <script>
-import ListCp from "../components/list/PaginationCp.vue";
+import PaginationCp from "../components/list/PaginationCp.vue";
 
 export default {
   name: "List",
-  components: { ListCp },
+  props: ["page"],
+  components: { PaginationCp },
 };
 </script>

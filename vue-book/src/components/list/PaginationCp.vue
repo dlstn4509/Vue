@@ -5,22 +5,14 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import TableCp from "../common/TableCp.vue";
 
 export default {
   name: "PagerCp",
   components: { TableCp },
-  computed: {
-    ...mapGetters(["GET_BOOKS"]),
-  },
-  watch: {
-    GET_BOOKS: function (v) {
-      console.log(v);
-    },
-  },
   created() {
-    this.$store.dispatch("ACT_BOOKS");
+    console.log(this.$route.params.page);
+    this.$store.dispatch("ACT_BOOKS", this.$route.params.page || 1);
   },
 };
 </script>

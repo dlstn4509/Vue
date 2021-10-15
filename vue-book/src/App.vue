@@ -23,8 +23,7 @@ export default {
 <style lang="scss">
 .app-wrapper {
   width: 100%;
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   @include flex;
   @include flexCol;
   .router-view {
