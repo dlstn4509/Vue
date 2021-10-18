@@ -8,4 +8,10 @@ export default {
   GET_LOADING: function (state) {
     return state.isLoading;
   },
+  GET_PAGE: function (state) {
+    return state.page;
+  },
+  GET_SCTOP: function (state) {
+    return state.scTop;
+  },
 };

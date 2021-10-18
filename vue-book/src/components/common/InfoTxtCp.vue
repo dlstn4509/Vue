@@ -1,14 +1,14 @@
 <template>
   <div class="info-wrap" :style="style">
-    <div class="title">{{ title }}</div>
-    <div class="content">{{ content }}</div>
+    <div class="title">{{ data.title }}</div>
+    <div class="content">{{ data.content }}</div>
   </div>
 </template>
 
 <script>
-import mixinInfo from "../../components/mixins/mixInfo";
+import mixinInfo from "../mixins/mixInfo";
 export default {
-  name: "InfoTxt",
+  name: "InfoTxtCp",
   mixins: [mixinInfo],
 };
 </script>
@@ -16,6 +16,7 @@ export default {
 <style lang="scss" scoped>
 .info-wrap {
   @include flex;
+  border-bottom: 1px solid $light-color;
   .title {
     color: $primary-color;
     width: 20%;

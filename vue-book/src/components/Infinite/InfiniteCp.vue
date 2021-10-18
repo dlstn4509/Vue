@@ -22,7 +22,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["GET_BOOKS"]),
+    ...mapGetters(["GET_BOOKS", "GET_SCTOP"]),
     lastPage() {
       return this.GET_BOOKS.pager ? this.GET_BOOKS.pager.totalPage : 10000;
     },
@@ -40,6 +40,7 @@ export default {
   },
   updated() {
     this.$store.dispatch("ACT_LOADING", false);
+    window.scrollTo(0, this.GET_SCTOP);
   },
   methods: {
     changeVisible(isVisible) {

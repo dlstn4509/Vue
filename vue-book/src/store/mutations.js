@@ -9,4 +9,10 @@ export default {
   MUT_LOADING(state, v) {
     state.isLoading = v;
   },
+  MUT_PAGE(state, v) {
+    state.page = v;
+  },
+  MUT_SCTOP(state, v) {
+    state.scTop = v;
+  },
 };

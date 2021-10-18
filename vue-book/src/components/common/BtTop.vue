@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "BtTop",
   data() {
@@ -12,11 +13,18 @@ export default {
       isTop: false,
     };
   },
+  computed: {
+    ...mapGetters(["GET_SCTOP"]),
+  },
   created() {
     window.addEventListener("scroll", this.onScroll);
   },
+  destroyed() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
   methods: {
     onScroll() {
+      this.$store.dispatch("ACT_SCTOP", window.scrollY)
       this.isTop = window.scrollY > 500 ? true : false;
     },
     moveTop() {

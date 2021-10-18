@@ -65,6 +65,7 @@ export default {
   methods: {
     changePage(e) {
       const page = e.currentTarget.dataset["page"];
+      this.$store.dispatch("ACT_PAGE", page);
       if (this.page != page) {
         this.$store.dispatch("ACT_LOADING", true);
         this.$store.dispatch("ACT_BOOKS", { page });

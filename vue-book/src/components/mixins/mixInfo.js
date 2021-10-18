@@ -1,5 +1,5 @@
 export default {
-  props: ["styled", "title", "content"],
+  props: ["styled", "data"],
   computed: {
     style() {
       if (this.styled && this.styled.padding) {

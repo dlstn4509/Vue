@@ -14,11 +14,11 @@ export default {
   name: "PaginationCp",
   components: { TableCp, PagerCp },
   computed: {
-    ...mapGetters(["GET_BOOKS"]),
+    ...mapGetters(["GET_BOOKS", "GET_PAGE"]),
   },
   created() {
     this.$store.dispatch("ACT_LOADING", true);
-    this.$store.dispatch("ACT_BOOKS", { page: 1 });
+    this.$store.dispatch("ACT_BOOKS", { page: this.GET_PAGE });
   },
   updated() {
     this.$store.dispatch("ACT_LOADING", false);
