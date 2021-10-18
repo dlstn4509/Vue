@@ -42,6 +42,22 @@ tr {
       max-width: 40px;
       max-height: 40px;
     }
+    @include MD {
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: none;
+      }
+      @include SM {
+        &:nth-child(6) {
+          display: none;
+        }
+      }
+      @include XS {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
   }
 }
 </style>

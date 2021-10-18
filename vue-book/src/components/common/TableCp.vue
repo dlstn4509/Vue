@@ -38,10 +38,22 @@ export default {
       background-color: $primary-color;
       color: $light-color;
       padding: 0.75em 0;
-    }
-    td {
-      padding: 0.5em 0;
-      vertical-align: middle;
+      @include MD {
+        &:nth-child(4),
+        &:nth-child(5) {
+          display: none;
+        }
+      }
+      @include SM {
+        &:nth-child(6) {
+          display: none;
+        }
+      }
+      @include XS {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
     }
   }
 }

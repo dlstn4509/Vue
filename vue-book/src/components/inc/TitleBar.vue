@@ -6,7 +6,7 @@
         Vue.js / Vuex / Vue-router를 활용한 도서 관리 시스템
       </template>
       <hr class="my-4" />
-      <p>
+      <p class="content">
         Node.js / Express / MySQL을 활용한 도서 관리 시스템을 확인 하시려면
         아래의 링크를 클릭하세요.
       </p>
@@ -40,6 +40,28 @@ export default {
     .display-3 {
       font-size: 2.5rem;
       margin-bottom: 0.25em;
+      @include MD {
+        font-size: 2rem;
+      }
+      @include SM {
+        font-size: 1.5rem;
+      }
+    }
+    p {
+      line-height: 1.25;
+      &.lead {
+        @include MD {
+          font-size: 1.125rem;
+        }
+        @include SM {
+          font-size: 0.875rem;
+        }
+      }
+      &.content {
+        @include MD {
+          display: none;
+        }
+      }
     }
   }
 }

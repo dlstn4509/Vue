@@ -50,7 +50,7 @@ export default {
     cursor: pointer;
     padding: 0.5em 1em;
     &:hover {
-      background-color: $secondary-color;
+      background-color: red;
       color: $dark-color;
     }
   }
@@ -59,7 +59,7 @@ export default {
     width: 100%;
     left: 0;
     top: 2.5em;
-    background-color: $grey-color;
+    background-color: red;
     border-top: 1px solid $secondary-color;
     li {
       font-size: 0.75em;
