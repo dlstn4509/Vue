@@ -1,5 +1,5 @@
 export default {
-  books: [],
+  books: {},
   book: {},
   isLoading: false,
 };

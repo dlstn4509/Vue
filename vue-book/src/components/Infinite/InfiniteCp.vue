@@ -1,6 +1,6 @@
 <template>
   <section class="wrapper list-wrapper">
-    <TableCp :isPager="false" />
+    <TableCp :isPager="false" :books="books" />
     <div v-observe="changeVisible" />
   </section>
 </template>
@@ -16,10 +16,14 @@ export default {
     return {
       page: 1,
       books: [],
+      listCnt: 10,
     };
   },
   computed: {
     ...mapGetters(["GET_BOOKS"]),
+    lastPage() {
+      return this.GET_BOOKS.pager ? this.GET_BOOKS.pager.totalPage : 10000;
+    },
   },
   watch: {
     GET_BOOKS: function (v) {
@@ -27,14 +31,22 @@ export default {
     },
   },
   created() {
-    this.$store.dispatch("ACT_BOOKS", { page: this.page++, listCnt: 20 });
+    this.$store.dispatch("ACT_BOOKS", {
+      page: this.page++,
+      listCnt: this.listCnt,
+    });
+  },
+  updated() {
+    this.$store.dispatch("ACT_LOADING", false);
   },
   methods: {
-    changeVisible(isVisible, entry) {
-      console.log(entry);
-      console.log(isVisible);
-      if (isVisible) {
-        this.$store.dispatch("ACT_BOOKS", { page: this.page++, listCnt: 20 });
+    changeVisible(isVisible) {
+      if (isVisible && this.page <= this.lastPage) {
+        this.$store.dispatch("ACT_LOADING", true);
+        this.$store.dispatch("ACT_BOOKS", {
+          page: this.page++,
+          listCnt: this.listCnt,
+        });
       }
     },
   },
