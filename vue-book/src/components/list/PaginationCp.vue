@@ -1,6 +1,6 @@
 <template>
   <section class="wrapper list-wrapper">
-    <TableCp />
+    <TableCp :isPager="true" />
   </section>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   name: "PagerCp",
   components: { TableCp },
   created() {
-    this.$store.dispatch("ACT_BOOKS", 1);
+    this.$store.dispatch("ACT_BOOKS", { page: 1 });
   },
 };
 </script>

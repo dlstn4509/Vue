@@ -49,7 +49,6 @@ export default {
   watch: {
     pager: function (v) {
       if (v) {
-        console.log(v);
         this.prevPager = v.prevPager;
         this.prevPage = v.prevPage;
         this.nextPager = v.nextPager;
@@ -65,9 +64,9 @@ export default {
   },
   methods: {
     changePage(e) {
-      const _page = e.currentTarget.dataset["page"];
-      if (this.page != _page) {
-        this.$store.dispatch("ACT_BOOKS", _page);
+      const page = e.currentTarget.dataset["page"];
+      if (this.page != page) {
+        this.$store.dispatch("ACT_BOOKS", { page });
       }
     },
   },

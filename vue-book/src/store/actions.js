@@ -1,8 +1,9 @@
 import apiBooks from "../api/api-books";
 
-const ACT_BOOKS = async ({ commit }, page) => {
+const ACT_BOOKS = async ({ commit }, options) => {
   try {
-    const { data } = await apiBooks(page);
+    const { page = 1, listCnt = 5, pagerCnt = 3 } = options;
+    const { data } = await apiBooks(page, { listCnt, pagerCnt });
     commit("MUT_BOOKS", data);
   } catch (err) {
     commit("MUT_BOOKS", null);
