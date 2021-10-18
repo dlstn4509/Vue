@@ -14,10 +14,6 @@ const routes = [
   },
   {
     path: "/infinite",
-    redirect: "/infinite/1",
-  },
-  {
-    path: "/infinite/:page",
     name: "ListInfinite",
     component: ListInfinite,
   },

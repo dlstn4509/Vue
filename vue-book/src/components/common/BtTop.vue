@@ -18,7 +18,6 @@ export default {
   methods: {
     onScroll() {
       this.isTop = window.scrollY > 500 ? true : false;
-      console.log(window.scrollY);
     },
     moveTop() {
       window.scrollTo(0, 0);
