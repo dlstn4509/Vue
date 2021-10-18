@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     onScroll() {
-      this.$store.dispatch("ACT_SCTOP", window.scrollY)
+      this.$store.dispatch("ACT_SCTOP", window.scrollY);
       this.isTop = window.scrollY > 500 ? true : false;
     },
     moveTop() {
