@@ -16,7 +16,7 @@
           </router-link>
         </li>
         <li>
-          <a href="http://127.0.0.1:3000/book">
+          <a href="http://15.164.52.218">
             도서리스트
             <small>(Express)</small>
           </a>
