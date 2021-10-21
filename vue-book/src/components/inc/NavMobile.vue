@@ -16,7 +16,7 @@
           </router-link>
         </li>
         <li>
-          <a href="http://15.164.52.218">
+          <a href="https://www.dabanbus.kr">
             도서리스트
             <small>(Express)</small>
           </a>
