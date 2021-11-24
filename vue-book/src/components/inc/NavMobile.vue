@@ -16,7 +16,7 @@
           </router-link>
         </li>
         <li>
-          <a href="https://www.dabanbus.kr">
+          <a href="https://www.dabanbus.kr/book">
             도서리스트
             <small>(Express)</small>
           </a>
@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: "NavMobile",
+  name: 'NavMobile',
   data() {
     return {
       isVisible: false,
